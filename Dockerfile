@@ -18,7 +18,7 @@ RUN export LLVM_CONFIG=/tmp/clang/bin/llvm-config && \
     make -f /tmp/Halide/Makefile install && \
     rm -rf /root/halide_master && \
     mv /usr/local/share/halide/ /root/halide_master && \
-    mv /usr/local/lib/ /root/halide_master/lib && \
+    mv /usr/local/lib/ /root/halide_master/bin && \
     mv /usr/local/include/ /root/halide_master/include && \
     cd /tmp/Halide && \
     git checkout auto_scheduler && \
@@ -28,7 +28,7 @@ RUN export LLVM_CONFIG=/tmp/clang/bin/llvm-config && \
     make -f /tmp/Halide/Makefile install && \
     rm -rf /root/halide_auto_scheduler && \
     mv /usr/local/share/halide/ /root/halide_auto_scheduler && \
-    mv /usr/local/lib/ /root/halide_auto_scheduler/lib && \
+    mv /usr/local/lib/ /root/halide_auto_scheduler/bin && \
     mv /usr/local/include/ /root/halide_auto_scheduler/include && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 

@@ -18,10 +18,10 @@ RUN apt-get update && apt-get install -y wget xz-utils git make gcc g++ zlib1g-d
     make -f /tmp/Halide/Makefile && \
     rm -rf /root/halide_master/bin/build && \
     cd /tmp/Halide && \
-	git checkout auto_scheduler && \
-	mkdir /root/halide_auto_scheduler && \
-	cd /root/halide_auto_scheduler && \
-	make -f /tmp/Halide/Makefile && \
-	rm -rf /root/halide_auto_scheduler/bin/build && \
-	apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    git checkout auto_scheduler && \
+    mkdir /root/halide_auto_scheduler && \
+    cd /root/halide_auto_scheduler && \
+    make -f /tmp/Halide/Makefile && \
+    rm -rf /root/halide_auto_scheduler/bin/build && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
